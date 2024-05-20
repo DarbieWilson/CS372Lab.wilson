@@ -1,0 +1,33 @@
+Timing the Towers of Hanoi:
+
+For 5 pegs:
+Recursively, the elapsed time was 7.8438e-05s.
+Iteratively, the elapsed time was 1.661e-06s. 
+
+For 10 pegs:
+Recursively, the elapsed time was 3.5071e-05s.
+Iteratively, the elapsed time was 2.5523e-05s. 
+
+For 15 pegs:
+Recursively, the elapsed time was 1.5623e-05s.
+Iteratively, the elapsed time was 2.154e-05s. 
+
+For 20 pegs:
+Recursively, the elapsed time was 0.000117406s.
+Iteratively, the elapsed time was 3.1525e-05s. 
+
+For 20 pegs:
+Recursively, the elapsed time was 0.000570223s.
+Iteratively, the elapsed time was 1.638e-06s. 
+
+For 30 pegs:
+Recursively, the elapsed time was 0.0137739s.
+Iteratively, the elapsed time was 1.664e-06s. 
+
+For 35 pegs:
+Recursively, the elapsed time was 0.0592224s.
+Iteratively, the elapsed time was 1.0365e-05s. 
+
+Do you see any difference in the timing between the recursive and iterative versions of the algorithm?
+Yes. The iterative elapsed time was always faster than the recursive timing. 
+The "gap" of time between the recusive and iterative values expanded when we increased disc counts.  
