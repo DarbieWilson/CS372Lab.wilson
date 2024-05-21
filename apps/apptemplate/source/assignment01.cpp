@@ -1,6 +1,6 @@
 //
 // File:   assignment1.cpp
-// Author: <PUT YOUR NAME HERE>
+// Author: Darbie Wilson
 // Purpose:
 // Illustrate some of the bad thins that can happen with
 // pointers
@@ -10,6 +10,21 @@ using namespace std;
 
 
 int main() {
-  // Put your code here.
+
+  double arrayPtr;
+  double *dptr;
+  dptr = new double;
+  // This function uses new to allocate a large array of integers in the heap.
+
+  cout << &arrayPtr << "      ";
+  cout << dptr;
+
+  const int SIZE = 25;
+  arrayPtr = new double[SIZE];
+  for (int i = 0; i < SIZE; i++) {
+      *arrayPtr[i] = i*i;
+      *(arrayPtr + i) = i*i;
+  }
+ 
   return 0;
 }
