@@ -5,6 +5,7 @@
 // Illustrate some of the bad thins that can happen with
 // pointers
 //
+/*
 #include <iostream>
 using namespace std;
 
@@ -28,3 +29,4 @@ int main() {
  
   return 0;
 }
+*/
