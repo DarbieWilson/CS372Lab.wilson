@@ -4,7 +4,7 @@
 // Purpose:
 // Make a list class
 //
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -44,7 +44,7 @@ void setupList()
   newNode->prev = nullptr;
   head = newNode;
   tail = nedNode;
-}
+};
 
 // Construct
 List () 
@@ -159,3 +159,4 @@ void printTheList()
 
   return 0;
 }
+*/
