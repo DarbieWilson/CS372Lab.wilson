@@ -37,7 +37,32 @@ protected:
     return uniGenerator(eng1);
 
   }
-  void fillWithRandomIntegers(std::vector<int> &v, int numberItems) {
+  void fillWithRandomIntegers100(std::vector<int> &v, int numberItems) {
+    for (int i=0; i < numberItems; ++i) {
+      v[i] = giveMeARandomInt(0, 100);
+    }
+  }  
+  void fillWithRandomIntegers500(std::vector<int> &v, int numberItems) {
+    for (int i=0; i < numberItems; ++i) {
+      v[i] = giveMeARandomInt(0, 500);
+    }
+  }
+  void fillWithRandomIntegers1000(std::vector<int> &v, int numberItems) {
+    for (int i=0; i < numberItems; ++i) {
+      v[i] = giveMeARandomInt(0, 1000);
+    }
+  }
+  void fillWithRandomIntegers5000(std::vector<int> &v, int numberItems) {
+    for (int i=0; i < numberItems; ++i) {
+      v[i] = giveMeARandomInt(0, 5000);
+    }
+  }
+  void fillWithRandomIntegers10000(std::vector<int> &v, int numberItems) {
+    for (int i=0; i < numberItems; ++i) {
+      v[i] = giveMeARandomInt(0, 10000);
+    }
+  }
+  void fillWithRandomIntegers100000(std::vector<int> &v, int numberItems) {
     for (int i=0; i < numberItems; ++i) {
       v[i] = giveMeARandomInt(0, 100000);
     }
