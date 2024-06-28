@@ -6,26 +6,10 @@ using namespace std;
 
 void moveDisks(int, stack<int> &, stack<int> &, stack<int>&);
 void printIt(int , char , char );
-void MoveDisksHelper(stack<int> &, stack<int> &, char , char );
-
-long fibonacci(unsigned n) {
-  if (n < 2) return n;
-  return fibonacci(n-1) + fibonacci(n-2);
-}
-
-long fibit(int num) {
-  long x = 0, y = 1, z = 0;
-  if (num == 0) {return x;}
-  for (int i=2; i <= num; i++) {
-    z = x + y;
-    x = y;
-    y = z;
-  }
-  return y;
-}
+void MoveDisksHelper(stack<int> &, stack<int> &, char , char ) ;
 
 int main() {
-  for (auto numdisks: {5}) {
+  for (auto numdisks: {3,5,6}) {
       stack<int> source;
       stack<int> dest;
       stack<int> aux;
@@ -33,21 +17,6 @@ int main() {
       moveDisks(numdisks, source, aux, dest);
       cout << "Moved " << numdisks << " pegs." <<  endl;
     }
-
-  auto start = std::chrono::steady_clock::now();
-  std::cout << "f(30), recursively = " << fibonacci(5) << '\n';
-
-  auto end = std::chrono::steady_clock::now();
-  std::chrono::duration<double> elapsed_seconds = end-start;
-  std::cout << "elapsed time: " << elapsed_seconds.count() <<"s\n";
-
-  start = std::chrono::steady_clock::now();
-  std::cout << "f(30), iteratively = " << fibit(5) << '\n';
-
-  end = std::chrono::steady_clock::now();
-  elapsed_seconds = end-start;
-  std::cout << "elapsed time: " << elapsed_seconds.count() <<"s\n";
-
     return 0;
 }
 
@@ -114,8 +83,8 @@ void MoveDisksHelper(stack<int> &source, stack<int> &dest, char s, char d) {
 void printIt(int disk, char fromPeg, char toPeg) {
   // Do nothing for timing test, but otherwise
   std::cout<< "Move disk "<<disk
-           << " from peg " << fromPeg
-           << " to peg " << toPeg << std::endl;
+           << "from peg " << fromPeg
+           << "to peg " << toPeg << std::endl;
 }
 
 
