@@ -10,12 +10,16 @@ void MoveDisksHelper(stack<int> &, stack<int> &, char , char ) ;
 
 int main() {
   for (auto numdisks: {3,5,6}) {
+      auto start = std::chrono::steady_clock::now();
       stack<int> source;
       stack<int> dest;
       stack<int> aux;
       cout << "Numdisks: " << numdisks << endl;
       moveDisks(numdisks, source, aux, dest);
+      auto end = std::chrono::steady_clock::now();
+      std::chrono::duration<double> elasped_seconds = end - start;
       cout << "Moved " << numdisks << " pegs." <<  endl;
+      std::cout << "Elasped wall time: " << elasped_seconds.count();
     }
     return 0;
 }
