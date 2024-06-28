@@ -9,6 +9,7 @@
 #include <vector>
 #include <stack>
 #include <utility>
+#include <chrono>
 
 class IComparable {
   virtual int compareTo(IComparable &rhs) = 0;
@@ -53,8 +54,12 @@ public:
   void quicksortIter(std::vector<T> & a, int start, int end) {
       // create a stack of `std::pairs` for storing subarray start and end index
       std::stack<std::pair<int, int>> s;
+      auto start = std::chrono::steady_clock::now();
       // push the start and end index of the array into the stack
       s.push(std::make_pair(start, end));
+      auto end = std::chrono::steady_clock::now();
+      std::chrono::duration<double> elasped_seconds = end - start;
+      std::cout << "Elasped wall time: " << elasped_seconds.count();
       // loop till stack is empty
       while (!s.empty()) {
           // remove top pair from the list and get subarray starting
